@@ -17,7 +17,23 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Aplikasi Pertamaku'),
         ),
-        body: Center(child: Text('Hello World')),
+        body: Center(
+          child: Container(
+            color: Colors.lightBlue,
+            width: 150,
+            height: 50,
+            child: Text(
+              'Saya adalah Farham Ganteng Banget testtestestsetsetestes',
+              maxLines: 2, // Wrap TextWidget
+              overflow: TextOverflow.ellipsis, // dikasih titik-titik
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.white,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
       ),
     );
   }
