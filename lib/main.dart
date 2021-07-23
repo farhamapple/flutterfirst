@@ -9,32 +9,30 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter First Apps',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Aplikasi Pertamaku'),
+        title: 'Flutter First Apps',
+        theme: ThemeData(
+          primarySwatch: Colors.red,
         ),
-        body: Center(
-          child: Container(
-            color: Colors.lightBlue,
-            width: 150,
-            height: 50,
-            child: Text(
-              'Saya adalah Farham Ganteng Banget testtestestsetsetestes',
-              maxLines: 2, // Wrap TextWidget
-              overflow: TextOverflow.ellipsis, // dikasih titik-titik
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.white,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.bold),
+        home: Scaffold(
+          appBar: AppBar(
+            actions: [],
+            title: Text('Image Widget'),
+          ),
+          body: Center(
+            child: Container(
+              width: 350,
+              height: 500,
+              color: Colors.lightBlue,
+              child: Image(
+                // fit: BoxFit .contain, // Membuat Sebuah image menyesuaikan diangka maksimumnya
+                //fit: BoxFit.cover,// menyesuaikan
+                fit: BoxFit.fill,
+                image: AssetImage("images/gambar_1.jpg"),
+                //image: NetworkImage("https://picsum.photos/350/500"),
+              ),
+              //child: Image.asset("images/gambar_1.jpg"),
             ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
