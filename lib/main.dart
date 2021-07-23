@@ -15,24 +15,24 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Aplikasi Pertamaku'),
+          title: Text('Latihan Row Column'),
         ),
-        body: Center(
-          child: Container(
-            color: Colors.lightBlue,
-            width: 150,
-            height: 50,
-            child: Text(
-              'Saya adalah Farham Ganteng Banget testtestestsetsetestes',
-              maxLines: 2, // Wrap TextWidget
-              overflow: TextOverflow.ellipsis, // dikasih titik-titik
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.white,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.bold),
-            ),
-          ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: <Widget>[
+            Text("Text Column 1"),
+            Text("Text Column 2"),
+            Text("Text Column 3"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Text("Text Row 1"),
+                Text("Text Row 2"),
+                Text("Text Row 3"),
+              ],
+            )
+          ],
         ),
       ),
     );
