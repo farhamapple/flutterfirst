@@ -14,27 +14,52 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Aplikasi Pertamaku'),
-        ),
-        body: Center(
-          child: Container(
-            color: Colors.lightBlue,
-            width: 150,
-            height: 50,
-            child: Text(
-              'Saya adalah Farham Ganteng Banget testtestestsetsetestes',
-              maxLines: 2, // Wrap TextWidget
-              overflow: TextOverflow.ellipsis, // dikasih titik-titik
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.white,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.bold),
-            ),
+          appBar: AppBar(
+            title: Text('List Tile'),
           ),
-        ),
-      ),
+          body: ListView(
+            children: <Widget>[
+              ListTile(
+                leading: CircleAvatar(),
+                title: Text('Farham Harvianto'),
+                subtitle: Text('Ini adalah Pesan dari List Tile'),
+                trailing: Text('10:00 PM'),
+                tileColor: Colors.lightBlue,
+              ),
+              Divider(
+                color: Colors.black,
+              ),
+              ListTile(
+                leading: CircleAvatar(),
+                title: Text('Farham Harvianto'),
+                subtitle: Text(
+                  'Ini adalah Pesan dari List Tile Ini adalah Pesan dari List Tile Ini adalah Pesan dari List Tile Ini adalah Pesan dari List Tile',
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                trailing: Text('10:00 PM'),
+              ),
+              Divider(
+                color: Colors.black,
+              ),
+              ListTile(
+                leading: CircleAvatar(),
+                title: Text('Farham Harvianto'),
+                subtitle: Text('Ini adalah Pesan dari List Tile'),
+                trailing: Text('10:00 PM'),
+                contentPadding: EdgeInsets.all(20),
+              ),
+              Divider(
+                color: Colors.black,
+              ),
+              ListTile(
+                leading: CircleAvatar(),
+                title: Text('Farham Harvianto'),
+                subtitle: Text('Ini adalah Pesan dari List Tile'),
+                trailing: Text('10:00 PM'),
+              ),
+            ],
+          )),
     );
   }
 }
